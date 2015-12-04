@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html lang="en-ca">
+<head>
+  <meta charset="utf-8">
+  <title>Forms</title>
+  <link href="css/main.css" rel="stylesheet">
+  <head>
+  <body>
+
+  <form action="https://formspree.io/hawn0006@algonquinlive.com" method="post"><!--where info is being sent to (find on formspree but change to https)-->
+
+    <div>
+      <label for="name">Name</label>
+      <input id="name" name="name">  <!--No need for type--><!--Everything with id should have a name, check naming convention on formspree-->
+    </div>
+
+    <div>
+      <label for="email">Email</label>
+      <input id="email" type="email" name="email" required placeholder="you@yours.com"> <!--Place for example email address (not a replacement for label (always have a visible label!) - placeholder is optional)-->
+    </div>
+
+    <div>
+      <label for="subject">Subject</label>
+        <select id="subject" name="_subject">
+          <option></option> <!--Empty at top, aesthetic, not necessary-->
+          <option>Looking for a freelancer</option> <!--drop down options-->
+          <option>Let's go for coffee</option>
+          <option>You're amazing!</option>
+        </select>
+    </div>
+
+<!--Radio Buttons - work as one unit, div is not good enough, does not define them as a group that works together (use for credit card info)-->
+
+<fieldset><!--label the whole group: legend-->
+  <legend>How are you feeling today?</legend>
+
+    <input id="happy" type="radio" name="feels"> <!--Type=checkbox for checkbox-->
+    <label="happy">Swell</label>
+
+    <input id="sad" type="radio" name="feels">
+    <label="sad">Sad</label>
+
+    <input id="grumpy" type="radio" name="feels">
+    <label="grumpy">Grumpy-cat</label>
+
+    <input id="super" type="radio" name="feels"> <!--To work as one unit - add same name attribute-->
+    <label="super">Super</label>
+
+</fieldset>
+
+<div>
+  <label for="message">Message</label>
+<textarea id="message" name="message"></textarea> <!--Comment box-->
+</div>
+
+<div>
+  <button type="submit">Send!</button><!--Button should only be used inside of a form, submits form's info-->
+</div> <!--formspree.com - info gets sent there - it's free-->
+
+  </form>
+
+</body>
+</html>
